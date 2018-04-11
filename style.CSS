@@ -1,0 +1,119 @@
+body {
+	background-color: rgb(176, 253, 249);
+}
+
+.top {
+	background-image: url(Images/topback.jpg);
+	height: 350px;
+}
+
+.top img {
+	float: right;
+	margin-right: 8px;
+	margin-top: 5px;
+}
+
+.top p {
+	text-align: right;
+	margin-right: 15px;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #89C35C;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 10px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.topnav a:hover {
+	background-color: #5EFB6E;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #2196F3;
+	color: white;
+}
+
+.topnav input[type=text]{
+	margin-top: 8px;
+	float: right;
+	font-size: 16px;
+	margin-right: 8px;
+	padding: 3px
+}
+
+#content {
+	margin-left: 170px;
+	margin-right: 170px;
+}
+
+#content p {
+	text-indent: 50px;
+	font-size: 20px;
+}
+
+#content ul {
+	font-size: 20px;
+}
+
+#content th {
+	font-size: 20px;
+}
+
+#content td {
+	Font-size: 18px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 0px;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #E5E4E2;
+}
+
+.skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
+}
+
+.css {width: 55%; background-color: #F87217;}
+.excel {width: 95%; background-color: blue;}
+.fa {width: 85%; background-color: red;}
+.html {width: 80%; background-color: #667C26;}
+.powerpoint {width: 93%; background-color: Green;}
+.quickbooks {width: 60%; background-color: #f44336;}
+.word {width: 90%; background-color: #966F33;}
+
+
+
+.footer h1 {
+	font-family: vivaldi;
+	font-size: 35px;
+	text-align: center;
+} 
+
+.footer p {
+	font-size: 18px;
+	text-align: center;
+	padding-bottom: 5px;
+}

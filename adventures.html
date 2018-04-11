@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Vincent Occhino|Adventures</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  background-color: #2B65EC;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+#column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<div class="top">
+		<center><a href="mailto:vincentocchino@yahoo.com?Subject=Employer Inquiry">
+			<img src="Images/email_logo.png" style="width: 40px; hiegth: 40px;"></a></center>
+		<a href="https://www.linkedin.com/in/vincentocchino/" target="_blank">
+			<img src="Images/linkedinlogo.png" style="width: 40px; height: 40px"></a>
+		<br>
+		<br>		
+		<p>Contact Me</p>
+	</div>
+	
+	<div class="topnav">
+		<!----Personal Information---->
+		<a href="index.html">Home</a>
+		<!----Education Background---->
+		<a href="education.html">Education</a>
+		<!----Professional Background---->
+		<a href="work history.html">Work History</a>
+		<!----Training/Skills---->
+		<a href="trainingandskills.html">Training & Skills</a>
+		<!----Others---->
+		<a href="adventures.html">Adventures</a>	
+	</div>
+	
+	<div id="content">
+		<center><h1><u>Adventures</u></h1></center>
+		<p>I enjoy the outdoors and traveling. I have visited five states other than California, which I have lived in all my life. I would like to 
+		visit all 58 national parks in the United States. Also, I would like start rock climbing, backpacking, and mountaineering. I am thinking of climbing
+		the seven summits but I do not want to commit to it until I know I like backpacking because to climb the seven summits I am going to need to backpack
+		and be able to spend a lot of time in a tent.</p>
+		
+		<p>The least I want to accomplish is summiting the tallest mountain in each state in the United States. It will allow me to visit all the states and
+		I will have accomplished something that is unique, not many people have accomplished it. I will hopefully be able to see the beauty of each of the
+		50 states when I visit them to climb there highest peak.</p>
+
+		<p>Here is a map of the national parks that I have visited and the climbs I have done towards climbing the tallest peak in all 50 states.</p>   
+
+	<br>
+	<script>
+
+	var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+
+	/**
+ 	* Create the map
+ 	*/
+	var map = AmCharts.makeChart( "chartdiv", {
+  	  "type": "map",
+  	  "projection": "miller",
+  	  "theme": "dark",
+  
+	"imagesSettings": {
+    	  "rollOverColor": "#089282",
+    	  "rollOverScale": 3,
+    	  "selectedScale": 3,
+    	  "selectedColor": "#089282",
+    	  "color": "White"},
+
+  	"areasSettings": {
+    	  "unlistedAreasColor": "#8A4117",
+    	  "outlineThickness": 0.1},
+
+  	"dataProvider": {
+    	  "map": "worldLow",
+    	  
+	"images": [ {
+      	  "svgPath": targetSVG,
+      	  "zoomLevel": 5,
+      	  "scale": 0.5,
+      	  "title": "Yosemite",
+      	  "latitude": 37.865101,
+      	  "longitude": -119.538329} ]
+	},
+  	
+	"export": {
+    	  "enabled": true}
+	} );
+</script>
+
+<!-- HTML -->
+	<div id="chartdiv"></div>
+	<br>
+	
+	<div id="row">
+	  <div id="column" style="background-color:#EDE275;">
+		<h2>Parks visited other than National Parks</h2>
+		<ul><i>
+		  <li>Aliso and Woods Canyons</li>
+		  <li>Andrew Molera</li>
+		  <li>Crystal Cove</li>
+		  <li>The Forest of Nisene Marks</li>
+		  <li>Fort Ord National Monument</li>
+		  <li>Garland Ranch</li>
+		  <li>Garrapata</li>
+		  <li>Jacks Peak</li>
+		  <li>Point Lobos</li>
+		  <li>Whiting Ranch</li>
+		</i></ul>
+	  </div>
+	  <div id="column" style="background-color:#FFF380;">
+		<h2>Mountains Climbed (Excluding tallest in each state)</h2>
+		<ul><i>
+		  <li>Mt. Shasta (0 summits)</li>
+		</i></ul>
+	  </div>
+	</div>	 
+		  
+	<h2>Yosemite</h2>
+		<p>I got the chance to go to Yosemite with my sister, two of her friends that are married to each other, and my sister’s fiancé who was her 
+		boyfriend at the time. I was able to spend about one and a half days in Yosemite before I had to get back to school. I want to go back and do 
+		the Yosemite falls hike. Also, I would like to do some more exploring outside of Yosemite Valley, which is where we did our hiking. I would like 
+		to do the Dome. There is a lot to explore in Yosemite. I want to do some backpacking in Yosemite.</p>
+	<div class="row">
+		<div class="column">
+    			<img src="Images/Yosemite7.jpg" style="width:100%; max-height: 375px">
+  		</div>
+	</div>
+	<div class="row">
+  		<div class="column">
+    			<img src="Images/Yosemite6.jpg" style="width:100%;">
+  		</div>
+  		<div class="column">
+    			<img src="Images/Yosemite10.jpg" style="width:100%;">
+  		</div>
+	</div>
+	<div class="row">
+  		<div class="column">
+    			<img src="Images/Yosemite1.jpg" style="width:100%;">
+  		</div>
+  		<div class="column">
+    			<img src="Images/Yosemite5.jpg" style="width:100%;">
+  		</div>
+  		<div class="column">
+    			<img src="Images/Yosemite8.jpg" style="width:100%;">
+  		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<img src="Images/Yosemite12.jpg" style="width:100%; max-height:325px;">
+		</div>
+	</div>
+	
+	<a href="adventures.html" style="color: red;"><b>Back to top</b></a>
+</div>
+
+<hr>
+	<div class="footer">
+		<center><img src="Images/Signiture1.png" alt="Vincent Occhino"></center>
+		<p>&copy; Copyright 2018</p>
+	</div>
+</div>
+</html>

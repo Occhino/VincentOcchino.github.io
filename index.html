@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Vincent Occhino|Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 3px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #BCE954;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #BCE954 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 10px 20px;
+    background-color: #BCE954;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<div class="top">
+		<a href="mailto:vincentocchino@yahoo.com?Subject=Employer Inquiry">
+			<img src="Images/email_logo.png" style="width: 40px; hiegth: 40px;"></a>
+		<a href="https://www.linkedin.com/in/vincentocchino/" target="_blank">
+			<img src="Images/linkedinlogo.png" style="width: 40px; height: 40px;"></a>
+		<br>
+		<br>
+		<p>Contact Me</p>
+	</div>
+	
+	<div class="topnav">
+		<!----Personal Information---->
+		<a href="index.html">Home</a>
+		<!----Education Background---->
+		<a href="education.html">Education</a>
+		<!----Professional Background---->
+		<a href="work history.html">Work History</a>
+		<!----Training/Skills---->
+		<a href="trainingandskills.html">Training & Skills</a>
+		<!----Others---->
+		<a href="adventures.html">Adventures</a>
+	</div>
+	<br>
+	<div id="content">
+		<center><img src="Images/Selfie.jpg" alt="Selfie" style="width: 275px; hiegth: 450px;"></center>
+		<center><h1><u>Personal Information</u></h1></center>
+
+		<img src="Images/Image1.jpeg" style="hiegth: 250px; width: 150px; float: right; padding-left: 5px">
+		
+		<p> Hi, my name is Vincent Occhino. I was born in Fountain Valley, CA and moved there when I was about four years old from Garden Grove, CA.
+		I have two older brothers and one younger sister. I am the “true” middle child. My oldest brother is four years older and my younger sister is
+		four years younger than me. My other older brother is only a year and a half older than me. I have been fortunate enough to grow up with my parents
+		still being married.</p></font>
+		
+		<p>I am currently living in Marina, CA while I am attending California State University Monterey Bay (CSUMB). I lived in Fountain Valley, CA for
+		about twenty-one and a half years before I moved to Marina, CA so I could attend the university I chose. I live in the Promontory Housing on the CSUMB
+		campus. I attended community college before I transferred to CSUMB. At first, I did not know what I wanted to major in so going to community
+		college gave me a chance to explore my options. I decided to explore business because I found I enjoyed business after I took some business classes.
+		I ended up getting an associate in arts degree for transfer in business.</p>
+		
+		<img src="Images/Doctor_Who.jpg" alt="Comic Con" style="width:135px; height:160px; float: left; padding-right:10px;">
+
+		<p style="text-indent:0px;">I found that business is a complex interesting subject. Every business is unique and faces its own challenges. That is what I like about it.
+		The complexity of business intrigues me because even in the same industry different companies operate differently. The accounting and finance part
+		of the business is the part I am most interested in. I enjoy working with numbers and coming up with solutions to problems that a company is facing.
+		I decided to have a concentration in the financial analysis track in accounting. My background in excel, finance, and investment knowledge has helped
+		me perform well in those different classes.</p>    
+	</div>
+	<br>
+	<div class="timeline">
+  	  <div class="container left">
+    	    <div class="content">
+      		<h2>1988</h2>
+      		<p style="text-indent:0px;">Born in Fountain Valley, CA</p>
+   	    </div>
+  	  </div>
+  	
+	<div class="container right">
+    	  <div class="content">
+     		<h2>1992</h2>
+     		<p style="text-indent:0px;">Moved to Fountain Valley, CA</p>
+    	  </div>
+  	</div>
+  	
+	<div class="container left">
+    	  <div class="content">
+      		<h2>2006</h2>
+      		<p style="text-indent:0px;">Graduated from Fountain Valley High School</p>
+    	  </div>
+  	</div>
+  	
+	<div class="container right">
+    	  <div class="content">
+      		<h2>2015</h2>
+      		<p style="text-indent:0px">Graduated from Orange Coast College</p>
+    	  </div>
+  	</div>
+  	
+	<div class="container left">
+    	  <div class="content">
+      		<h2>2018</h2>
+      		<p style="text-indent:0px;">Expected to graduate California State University Monterey Bayusto primis ea eam.</p>
+    	  </div>
+  	</div>
+  
+	</div>
+	<br>
+	<hr>
+	<div class="footer">
+		<center><img src="Images/Signiture1.png" alt="Vincent Occhino"></center>
+		<p>&copy; Copyright 2018</p>
+	</div>
+</div>
+</html>
